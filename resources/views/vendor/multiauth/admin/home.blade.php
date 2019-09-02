@@ -3,6 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('body')
+
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -17,6 +18,7 @@
         <!-- Main content -->
         <section class="content">
             <div class="row">
+                @if(!empty($pendingOrders))
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-yellow">
                         <span class="info-box-icon"><i class="ion ion-ios-gear-outline"></i></span>
@@ -29,6 +31,7 @@
                                 <div class="progress-bar" ></div>
                             </div>
                             <span class="progress-description">
+
                                 Amount: AUD ${{ $pendingOrders->sum('amount') }}
                             </span>
                         </div>
@@ -36,7 +39,9 @@
                     </div>
                     <!-- /.info-box -->
                 </div>
+                @endif
                 <!-- /.col -->
+                    @if(!empty($successOrders))
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-green">
                         <span class="info-box-icon"><i class="ion ion-checkmark"></i></span>
@@ -76,6 +81,7 @@
                     </div>
                     <!-- /.info-box -->
                 </div>
+
                 <!-- /.col -->
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="info-box bg-aqua">
@@ -96,6 +102,7 @@
                     </div>
                     <!-- /.info-box -->
                 </div>
+                @endif
                 <!-- /.col -->
             </div>
             <!-- /.row -->

@@ -3,7 +3,7 @@
 @section('title', 'Payments Order')
 
 @push('styles')
-	
+
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap.min.css">
 
 @endpush
@@ -58,14 +58,14 @@
                             <div class="progress"></div>
                             <div class="progress-bar"></div>
                             <span class="progress-description">
-                                Complete: 
+                                Complete:
                                 @if($completeOrders>0)
                                     {{ $completeOrders }}
                                 @else
                                 0
                                 @endif
                             </span>
-                            
+
 
                         </div>
 
@@ -97,7 +97,7 @@
                                 @else
                                     0
                                 @endif
-                                
+
                             </span>
                             <div class="progress"></div>
                             <div class="progress-bar"></div>
@@ -171,7 +171,7 @@
                             <div class="progress"></div>
                             <div class="progress-bar"></div>
                             <span class="progress-description">
-                                Complete: 
+                                Complete:
                                 @if($completedIssue>0)
                                     {{ $completedIssue }}
                                 @else
@@ -232,7 +232,7 @@
                                     <th>Status</th>
 
 				                    <th>Date</th>
-				                    
+
 				                    <th>Time</th>
 
                                     <th>Confirmation</th>
@@ -282,9 +282,9 @@
                                             @endif
 
                                         </td>
-					                    
+
                                         <td style='white-space:nowrap;'>{{ $order->created_at->toDateString() }}</td>
-					                    
+
 					                    <td style='white-space:nowrap;'>{{ $order->created_at->format('h:i:s A') }}</td>
 
                                         <td>
@@ -416,7 +416,7 @@
 			</div>
 
 
-              
+
               <hr>
 
 			<div class="row" style="margin-bottom: 10px;">

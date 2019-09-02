@@ -23,6 +23,16 @@ Route::group(['namespace' => 'Agent'], function() {
     Route::get('email/verify','Auth\VerificationController@show')->name('agent.verification.notice');
     Route::get('email/verify/{id}','Auth\VerificationController@verify')->name('agent.verification.verify');
 
+    //send money new system by jony
+    Route::get('send-money','SendMoneyController@sendMoneyStep')->name('sendMoneyStep');
+    Route::get('send-money-preview','SendMoneyController@sendMoneyPreview')->name('sendMoneyPreview');
+    Route::post('send-money','SendMoneyController@sendMoney')->name('sendMoney');
+    Route::post('pay-now','SendMoneyController@PayNow')->name('PayNow');
+    Route::get('pay-back','SendMoneyController@PayBack')->name('PayBack');
+    Route::get('search-user','SendMoneyController@searchUser')->name('searchUser');
+    Route::get('search-receiver','SendMoneyController@searchReceiver')->name('searchReceiver');
+    // send money new system end
+
 
     //Profile Show
     Route::get('profile', 'ProfileController@showProfile')->name('agent.showProfile');

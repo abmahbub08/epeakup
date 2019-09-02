@@ -64,11 +64,12 @@ class TransactionsController extends Controller
         //update balance
         $data = $balance->update(['balance' => $remainingBalance]);
         //store data
+        $charge = ($request->payment_method == 'bkash') ? getCharge(1) : getCharge(2);
         Transaction::create([
             'agent_id' => $id,
             'client_id' => $request->sender_name,
             'receiver_id' => $request->receiver_name,
-            'amount' => $request->amount
+            'amount' => $request->amount*($charge/100)
         ]);
         //redirect to transaction page
         return redirect()->route('agent.transactions')

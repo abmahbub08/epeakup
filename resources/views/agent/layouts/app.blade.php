@@ -18,6 +18,7 @@
     {{--  Toastr style  --}}
     <link rel="stylesheet" href="{{ asset('boomboom/'.'/plugins/toastr/toastr.min.css') }}">
 {{--  Extra style  --}}
+@yield('styles')
 @stack('styles')
 <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('boomboom') }}/dist/css/adminlte.min.css">
@@ -77,6 +78,7 @@
     toastr.warning("{{ Session::get('warning') }}")
     @endif
 </script>
+@yield('scripts')
 @stack('scripts')
 </body>
 </html>

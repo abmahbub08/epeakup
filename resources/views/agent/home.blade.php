@@ -27,12 +27,12 @@
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box">
-                        <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+                        {{--<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>--}}
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Remaining Balance</span>
+                            <span class="info-box-text">Search client</span>
                             <span class="info-box-number">
-                              {{ $balance->balance }}
+                              {{--{{ $balance->balance }}--}}
                             </span>
                         </div>
                         <!-- /.info-box-content -->
@@ -42,11 +42,11 @@
                 <!-- /.col -->
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+                        {{--<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>--}}
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Complete Transaction</span>
-                            <span class="info-box-number">410 <small>($33)</small></span>
+                            <a href="{{route('sendMoneyStep')}}"><span class="info-box-text">Send money</span></a>
+                            {{--<span class="info-box-number">410 <small>($33)</small></span>--}}
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -59,11 +59,11 @@
 
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
+                        {{--<span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>--}}
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Pending Transaction</span>
-                            <span class="info-box-number">760 <small>($100)</small></span>
+                            <span class="info-box-text">Request for money</span>
+                            {{--<span class="info-box-number">760 <small>($100)</small></span>--}}
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -72,11 +72,11 @@
                 <!-- /.col -->
                 <div class="col-12 col-sm-6 col-md-3">
                     <div class="info-box mb-3">
-                        <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
+                        {{--<span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>--}}
 
                         <div class="info-box-content">
-                            <span class="info-box-text">Total Transaction</span>
-                            <span class="info-box-number">2,000 <small>($200)</small></span>
+                            <span class="info-box-text">Contact us</span>
+                            {{--<span class="info-box-number">2,000 <small>($200)</small></span>--}}
                         </div>
                         <!-- /.info-box-content -->
                     </div>
