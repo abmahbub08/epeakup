@@ -44,7 +44,6 @@
                             <th scope="col">Name</th>
                             <th scope="col">Account Number</th>
                             <th scope="col">Amount</th>
-                            <th scope="col">Status</th>
                             <th scope="col">Date</th>
                         </tr>
                         </thead>
@@ -56,7 +55,6 @@
                         <td>{{$item->first_name.' '.$item->last_name}}</td>
                         <td>{{$item->account_number}}</td>
                         <td>{{$item->amount}}</td>
-                        <td>{{$item->status}}</td>
                         <td>{{$item->created_at}}</td>
                         </tr>
                             @endforeach

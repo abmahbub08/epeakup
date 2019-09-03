@@ -69,21 +69,10 @@
                                                     <input type="radio" value="Rocket" name="payment_method">
                                                 </label>
                                                 <label class="btn paymentMethod">
-                                                    <div class="method amex">GP Topup</div>
-                                                    <input type="radio" value="GP Topup" name="payment_method">
+                                                    <div class="method amex">Topup</div>
+                                                    <input type="radio" value="Topup" name="payment_method">
                                                 </label>
-                                                <label class="btn paymentMethod">
-                                                    <div class="method vishwa">Airtel Topup</div>
-                                                    <input type="radio" value="Airtel Topup" name="payment_method">
-                                                </label>
-                                                <label class="btn paymentMethod">
-                                                    <div class="method ez-cash">Talitalk Topup</div>
-                                                    <input type="radio" value="Talitalk Topup" name="payment_method">
-                                                </label>
-                                                <label class="btn paymentMethod">
-                                                    <div class="method ez-cash">Banglalink Topup</div>
-                                                    <input type="radio" value="Banglalink Topup" name="payment_method">
-                                                </label>
+
 
                                             </div>
                                         </div>

@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54760c84-ba81-4d54-af2c-c2a566ebed62" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/agent/contact-us/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/agent/layouts/min_nav.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/agent/overview.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/agent/transactions/history.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/email/template.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Agent/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Agent/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Agent/SendMoneyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Agent/SendMoneyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/agent/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agent/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/agent/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agent/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/agent/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agent/layouts/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/agent/send-money/step1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agent/send-money/step1.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/agent/send-money/step3.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agent/send-money/step3.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/agent.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/agent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,18 +37,22 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/agent/contact-us/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
+            <state relative-caret-position="364">
+              <caret line="93" column="88" selection-start-line="93" selection-start-column="88" selection-end-line="93" selection-end-column="88" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="channels.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/channels.php">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="step2.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="72" column="79" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="SendMoneyController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SendMoneyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Agent/SendMoneyController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
@@ -160,7 +151,6 @@
         <option value="$PROJECT_DIR$/app/Helper/helpers.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Agent/TransactionsController.php" />
         <option value="$PROJECT_DIR$/resources/views/agent/send-money/preview.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/agent/send-money/step4.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/agent/overview.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Agent/HomeController.php" />
@@ -172,11 +162,12 @@
         <option value="$PROJECT_DIR$/resources/views/agent/send-money/step3.blade.php" />
         <option value="$PROJECT_DIR$/routes/agent.php" />
         <option value="$PROJECT_DIR$/resources/views/agent/layouts/min_nav.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/agent/contact-us/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/email/template.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/email/template.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Agent/SendMoneyController.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/resources/views/agent/contact-us/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php" />
       </list>
     </option>
   </component>
@@ -435,6 +426,37 @@
               <item name="epeakup" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="agent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epeakup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epeakup" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="agent" type="462c0819:PsiDirectoryNode" />
+              <item name="clients" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epeakup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epeakup" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="agent" type="462c0819:PsiDirectoryNode" />
+              <item name="contact-us" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epeakup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epeakup" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="agent" type="462c0819:PsiDirectoryNode" />
+              <item name="send-money" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="epeakup" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epeakup" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="email" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -497,12 +519,12 @@
       <workItem from="1567312499476" duration="24584000" />
       <workItem from="1567440202209" duration="5187000" />
       <workItem from="1567447233792" duration="5901000" />
-      <workItem from="1567523882052" duration="11316000" />
+      <workItem from="1567523882052" duration="11568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66727000" />
+    <option name="totallyTimeSpent" value="66979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -514,7 +536,7 @@
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info id="npm" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3295082" />
       <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.26656026" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
@@ -809,13 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="97" column="99" selection-start-line="97" selection-start-column="99" selection-end-line="97" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step1.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -844,13 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
           <caret line="35" column="77" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/agent/contact-us/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="76" column="73" selection-start-line="76" selection-start-column="73" selection-end-line="76" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -892,6 +900,20 @@
           <folding>
             <element signature="e#46#60#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/agent/contact-us/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="93" column="88" selection-start-line="93" selection-start-column="88" selection-end-line="93" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="72" column="79" selection-start-line="72" selection-start-column="79" selection-end-line="72" selection-end-column="79" />
         </state>
       </provider>
     </entry>
