@@ -32,12 +32,22 @@
 @include('agent.layouts.nav')
 <!-- /.navbar -->
 
-    <!-- Main Sidebar Container -->
-@include('agent.layouts.sidebar')
+    {{--<!-- Main Sidebar Container -->--}}
+{{--@include('agent.layouts.sidebar')--}}
 
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        @yield('content')
+        <div class="content-header">
+
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <div class="content">
+           @include('agent.layouts.min_nav')
+            @yield('content')
+        </div>
+        </div>
     </div>
     <!-- /.content-wrapper -->
 
@@ -77,6 +87,12 @@
     @if(Session::has('warning'))
     toastr.warning("{{ Session::get('warning') }}")
     @endif
+</script>
+<script>
+    function openSearchBox() {
+        $('#search_btn').toggleClass('d-none');
+        $('#search_box').toggleClass('d-none');
+    }
 </script>
 @yield('scripts')
 @stack('scripts')

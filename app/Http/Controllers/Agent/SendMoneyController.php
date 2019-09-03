@@ -14,6 +14,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Ramsey\Uuid\Uuid;
 
 class SendMoneyController extends Controller
@@ -161,17 +162,36 @@ class SendMoneyController extends Controller
     }
     public function searchUser(Request $request){
         $q = '+'.$request->q;
-
-
-        $user = Client::select(
-            '*'
-        )
+        $user = Client::select( '*')
                ->where('phone',$q)
-
                ->first();
         if (!empty($user))
         $user->phone = explode('+61',$user->phone)[1];
       return response()->json(['success'=>true,'data'=>$user]);
+
+    }
+    public function searchClient(Request $request){
+
+        $q = '+'.$request->q;
+        $data['client'] = Client::where('phone',$request->q)->first();
+
+        $data['transactions'] = Transaction::join('clients','clients.id','transactions.client_id')
+                 ->join('receivers','receivers.id','transactions.receiver_id')
+                ->select(
+                    'transactions.amount'
+                    ,'transactions.created_at'
+                    ,'transactions.status'
+                    ,'receivers.payment_method'
+                    ,'receivers.first_name'
+                    ,'receivers.last_name'
+                    ,'receivers.account_number'
+
+                )
+                ->where('clients.phone',$request->q)
+               ->take(10)->orderby('created_at','desc')->get();
+        if (!empty($data['client']))
+     return view('agent.transactions.history',$data);
+     return redirect()->back()->with('info','No Client found with this mobile number');
 
     }
 
@@ -185,8 +205,21 @@ class SendMoneyController extends Controller
                ->where('account_number',$q)
 
                ->first();
-
       return response()->json(['success'=>true,'data'=>$user]);
 
+    }
+
+    public function contactUs(Request $request){
+        if ($request->method() == "GET")
+        return view('agent.contact-us.index');
+        else{
+            $data = $request->all();
+
+
+            Mail::send('email.template',['data'=>$data] , function ($message) use ($data) {
+                $message->to(env("ADMIN_EMAIL"), 'contact-us')->from('noreply@epeakup.com', 'Epeakup(contact-us)')->subject($data['subject']);
+            });
+           return redirect()->back()->with('success','Email send sent successfully.Admin will contact with you');
+        }
     }
 }

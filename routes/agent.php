@@ -2,6 +2,7 @@
 
 Route::group(['namespace' => 'Agent'], function() {
     Route::get('/', 'HomeController@index')->name('agent.dashboard');
+    Route::get('/overview', 'HomeController@overview')->name('agent.overview');
 
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('agent.login');
@@ -31,6 +32,8 @@ Route::group(['namespace' => 'Agent'], function() {
     Route::get('pay-back','SendMoneyController@PayBack')->name('PayBack');
     Route::get('search-user','SendMoneyController@searchUser')->name('searchUser');
     Route::get('search-receiver','SendMoneyController@searchReceiver')->name('searchReceiver');
+    Route::get('search-client-transaction','SendMoneyController@searchClient')->name('searchClient');
+    Route::any('contact-us','SendMoneyController@contactUs')->name('contactUs');
     // send money new system end
 
 

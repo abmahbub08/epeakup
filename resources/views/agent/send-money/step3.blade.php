@@ -83,9 +83,9 @@
                                 <input type="hidden" name="sender_email" value="{{$details['sender_email']}}">
                                 <div class="row">
                                     <div class="col-12">
-                                        <label for="first_name">Search Client : </label>
+                                        <label for="first_name">Search Receiver : </label>
                                         <div class="autocomplete" style="">
-                                            <input autocomplete="off" name="sender_name" id="myInput" oninput="" type="text" class="form-control  {{ $errors->has('sender_name')?' is-invalid':'' }}" value="{{old('sender_name')}}" placeholder="Sender Name" required>
+                                            <input autocomplete="off" name="" id="myInput" oninput="" type="text" class="form-control  {{ $errors->has('sender_name')?' is-invalid':'' }}" value="{{old('sender_name')}}" placeholder="Search By account number" >
 
                                         </div>
                                     </div>

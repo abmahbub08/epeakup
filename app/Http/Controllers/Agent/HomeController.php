@@ -32,5 +32,10 @@ class HomeController extends Controller
         $balance = Balance::where('agent_id',$id)->first();
         return view('agent.home',compact('balance'));
     }
+    public function overview(){
+        $data['id ']= Auth::guard('agent')->user()->id;
+        $data['balance'] = Balance::where('agent_id',$data['id '])->first();
+        return view('agent.overview',$data);
+    }
 
 }

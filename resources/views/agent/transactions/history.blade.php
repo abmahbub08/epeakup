@@ -2,48 +2,9 @@
 
 @section('title', 'Add Client ')
 @section('styles')
-    <style>
 
 
-        /*the container must be positioned relative:*/
-        .autocomplete {
-            position: relative;
-            display: inline-block;
-        }
-
-
-        .autocomplete-items {
-            position: absolute;
-            border: 1px solid #d4d4d4;
-            border-bottom: none;
-            border-top: none;
-            z-index: 99;
-            /*position the autocomplete items to be the same width as the container:*/
-            top: 100%;
-            left: 0;
-            right: 0;
-        }
-
-        .autocomplete-items div {
-            padding: 10px;
-            cursor: pointer;
-            background-color: #fff;
-            border-bottom: 1px solid #d4d4d4;
-        }
-
-        /*when hovering an item:*/
-        .autocomplete-items div:hover {
-            background-color: #e9e9e9;
-        }
-
-        /*when navigating through the items using the arrow keys:*/
-        .autocomplete-active {
-            background-color: DodgerBlue !important;
-            color: #ffffff;
-        }
-    </style>
-
-    @endsection
+@endsection
 
 @section('content')
 
@@ -52,14 +13,9 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Send Money</h1>
+                    <h1 class="m-0 text-dark">{{$client->first_name.' '.$client->last_name}} transaction histories</h1>
                 </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('agent.dashboard') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Send Money step 1</li>
-                    </ol>
-                </div><!-- /.col -->
+
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
     </div>
@@ -68,79 +24,45 @@
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="card">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6>Client Details</h6>
 
-                        <div class="card-body">
-                            <form action="{{ route('sendMoney') }}" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                <input type="hidden" name="step" value="{{encrypt('1')}}">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <label for="first_name">Search Client : </label>
-                                        <div class="autocomplete" style="">
-                                            <input autocomplete="off" name="" id="myInput" oninput="" type="text" class="form-control  {{ $errors->has('sender_name')?' is-invalid':'' }}" value="{{old('sender_name')}}" placeholder="Search by phone number" >
+                    <label for="">Name : {{$client->first_name.' '.$client->last_name}}</label>
+                    <br>
+                    <label for="">Phone : {{$client->phone}}</label>
+                    <br>
+                    <label for="">Email : {{$client->email}}</label>
+                    <br>
+                </div>
+                <div class="col-md-8">
 
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
+                    <h6>Histories</h6>
+                    <table class="table">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Account Number</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
 
-                                            <label for="first_name">Sender Name *</label>
+                        @foreach($transactions as $item)
 
+                        <tr>
+                        <td>{{$item->first_name.' '.$item->last_name}}</td>
+                        <td>{{$item->account_number}}</td>
+                        <td>{{$item->amount}}</td>
+                        <td>{{$item->status}}</td>
+                        <td>{{$item->created_at}}</td>
+                        </tr>
+                            @endforeach
 
-                                            <input autocomplete="off" name="sender_name" id="sender_name" oninput="" type="text" class="form-control  {{ $errors->has('sender_name')?' is-invalid':'' }}" value="{{old('sender_name')}}" placeholder="Sender Name" required>
-
-                                            @if ($errors->has('sender_name'))
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('sender_name') }}</strong>
-                                                </span>
-                                            @endif
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label for="phone">Australian Number *</label>
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">+61</div>
-                                            </div>
-                                            <input  required onkeypress="return isNumberKey(event)" name="australian_number" type="text" class="form-control {{ $errors->has('australian_number')?' is-invalid':'' }}" value="{{old('australian_number')}}" id="australian_number" placeholder="Australian Number">
-                                            @if ($errors->has('australian_number'))
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('australian_number') }}</strong>
-                                                </span>
-                                            @endif
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email">Email *</label>
-                                            <input name="sender_email" id="sender_email" type="email" class="form-control {{ $errors->has('sender_email')?' is-invalid':'' }}" value="{{old('sender_email')}}" placeholder="Email" required>
-                                            @if ($errors->has('sender_email'))
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $errors->first('sender_email') }}</strong>
-                                                </span>
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="text-center">
-                                    <button class="btn btn-primary" type="submit">Next</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -182,15 +104,15 @@
                         /*create a DIV element for each matching element:*/
                         b = document.createElement("DIV");
                         /*make the matching letters bold:*/
-                       var xx = arr[i];
+                        var xx = arr[i];
                         b.innerHTML += "<strong onclick='getExistClient("+xx+")'>" + arr[i]+ "</strong>";
                         // b.innerHTML += "<span onclick='getExistClient() >";
                         // b.innerHTML +=  arr[i].substr(val.length);
                         // b.innerHTML += "</span>";
                         // /*insert a input field that will hold the current array item's value:*/
-                           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                         // b.innerHTML += "</p>";
-                            /*execute a function when someone clicks on the item value (DIV element):*/
+                        /*execute a function when someone clicks on the item value (DIV element):*/
                         b.addEventListener("click", function(e) {
                             /*insert the value for the autocomplete text field:*/
                             inp.value = this.getElementsByTagName("input")[0].value;
@@ -265,7 +187,7 @@
 
         }
 
-        var countries = {!! \GuzzleHttp\json_encode($clients) !!};
+        var countries = []  ;
         // console.log(countries,countries2);
         autocomplete(document.getElementById("myInput"), countries);
 
@@ -280,11 +202,11 @@
                 url: "{{route('searchUser')}}?user_type=1&q="+event,
                 context: document.body
             }).done(function(data) {
-              var data = data.data;
+                var data = data.data;
 
-               $('#sender_name').val(data.first_name+' '+data.last_name);
-               $('#australian_number').val(data.phone);
-               $('#sender_email').val(data.email);
+                $('#sender_name').val(data.first_name+' '+data.last_name);
+                $('#australian_number').val(data.phone);
+                $('#sender_email').val(data.email);
 
             });
         }
@@ -294,4 +216,4 @@
 
 
     </script>
-    @endsection
+@endsection
