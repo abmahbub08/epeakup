@@ -3,7 +3,7 @@
 /public/storage
 /storage/*.key
 /templetes
-/vendor
+
 .env
 .phpunit.result.cache
 Homestead.json
