@@ -44,7 +44,7 @@
                                     <div class="col-md-4">
                                         <label for="phone">Sender Name : {{$request->sender_name}}</label>
                                         <br>
-                                        <label for="phone">Mobile Number : {{$request->australian_number}}</label>
+                                        <label for="phone">Mobile Number : +61{{$request->australian_number}}</label>
                                         <br>
                                         <label for="phone">Email Address: {{$request->sender_email}}</label>
                                         <br>

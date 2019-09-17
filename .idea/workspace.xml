@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54760c84-ba81-4d54-af2c-c2a566ebed62" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Agent/SendMoneyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Agent/SendMoneyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/agent/send-money/preview.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/agent/send-money/preview.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +19,7 @@
       <file leaf-file-name="step2.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
+            <state relative-caret-position="1395">
               <caret line="93" selection-start-line="93" selection-end-line="93" />
             </state>
           </provider>
@@ -29,8 +28,8 @@
       <file leaf-file-name="step3.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step3.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3214">
-              <caret line="314" selection-start-line="314" selection-end-line="314" />
+            <state relative-caret-position="72">
+              <caret line="90" column="46" lean-forward="true" selection-start-line="84" selection-start-column="35" selection-end-line="90" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -38,31 +37,31 @@
       <file leaf-file-name="step4.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step4.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
+            <state relative-caret-position="327">
               <caret line="84" column="87" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preview.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="step1.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step1.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="85" column="46" lean-forward="true" selection-start-line="79" selection-start-column="40" selection-end-line="85" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preview.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/preview.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="81" column="128" selection-start-line="81" selection-start-column="83" selection-end-line="81" selection-end-column="128" />
+            <state relative-caret-position="150">
+              <caret line="46" column="78" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helpers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Helper/helpers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SendMoneyController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SendMoneyController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Agent/SendMoneyController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="223">
@@ -95,8 +94,8 @@
       <file leaf-file-name="history.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/agent/transactions/history.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="810">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
@@ -104,7 +103,7 @@
       <file leaf-file-name="agent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/agent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
+            <state relative-caret-position="525">
               <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
             </state>
           </provider>
@@ -155,7 +154,6 @@
         <option value="$PROJECT_DIR$/resources/views/agent/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/agent/layouts/nav.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/agent/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/agent/send-money/step1.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/agent/layouts/min_nav.blade.php" />
         <option value="$PROJECT_DIR$/resources/email/template.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/email/template.blade.php" />
@@ -164,12 +162,13 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/agent/send-money/step3.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/agent/send-money/preview.blade.php" />
         <option value="$PROJECT_DIR$/app/Transaction.php" />
         <option value="$PROJECT_DIR$/routes/agent.php" />
         <option value="$PROJECT_DIR$/resources/views/agent/transactions/history.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Agent/SendMoneyController.php" />
+        <option value="$PROJECT_DIR$/resources/views/agent/send-money/step3.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/agent/send-money/step1.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/agent/send-money/preview.blade.php" />
       </list>
     </option>
   </component>
@@ -333,6 +332,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -493,7 +493,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,11 +547,12 @@
       <workItem from="1568568676281" duration="2737000" />
       <workItem from="1568610045892" duration="31000" />
       <workItem from="1568685139779" duration="6057000" />
+      <workItem from="1568740893973" duration="386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76221000" />
+    <option name="totallyTimeSpent" value="76607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
@@ -564,7 +564,7 @@
       <window_info anchor="bottom" id="Run" order="7" />
       <window_info id="npm" order="1" side_tool="true" />
       <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3295082" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.28092578" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.2857143" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
@@ -797,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step1.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="86" column="59" lean-forward="true" selection-end-line="296" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/channels.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -832,9 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="39" selection-end-column="50" />
-          <folding>
-            <element signature="e#40#72#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -876,31 +866,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step3.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3214">
-          <caret line="314" selection-start-line="314" selection-end-line="314" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step2.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
+        <state relative-caret-position="1395">
           <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step4.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="84" column="87" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/preview.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="81" column="128" selection-start-line="81" selection-start-column="83" selection-end-line="81" selection-end-column="128" />
         </state>
       </provider>
     </entry>
@@ -920,15 +889,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/agent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
+        <state relative-caret-position="525">
           <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/agent/transactions/history.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        <state relative-caret-position="810">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
@@ -939,6 +908,34 @@
           <folding>
             <element signature="e#46#60#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step3.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="90" column="46" lean-forward="true" selection-start-line="84" selection-start-column="35" selection-end-line="90" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step4.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="84" column="87" selection-start-line="84" selection-start-column="78" selection-end-line="84" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/step1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="85" column="46" lean-forward="true" selection-start-line="79" selection-start-column="40" selection-end-line="85" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/agent/send-money/preview.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="46" column="78" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
         </state>
       </provider>
     </entry>
