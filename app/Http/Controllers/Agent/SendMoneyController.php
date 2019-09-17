@@ -95,6 +95,8 @@ class SendMoneyController extends Controller
 
         $data['details'] = $tr;
         $data['details']['id'] = encrypt(3);
+        $australian_number = explode('+61', $data['details']['australian_number']);
+        $data['details']['australian_number'] = (isset($australian_number[1])) ? $australian_number[1] : '';
 
         return view('agent.send-money.step4',$data);
     }
@@ -114,8 +116,10 @@ class SendMoneyController extends Controller
     }
     public function PayNow(){
         $request = TemporaryTransaction::where('user_id',Auth::guard('agent')->user()->id)->first();
+
         if (!empty($request))
             $request = (object)\GuzzleHttp\json_decode($request->value,true);
+
 
         DB::beginTransaction();
 
@@ -175,7 +179,7 @@ class SendMoneyController extends Controller
                    ->with('success', 'Your balance successfully transfer');;
             // all good
         } catch (\Exception $e) {
-dd($e,Auth::guard('agent')->id());
+
             DB::rollback();
 
             // something went wrong
@@ -216,7 +220,9 @@ dd($e,Auth::guard('agent')->id());
 
                 )
                 ->where('clients.phone',$request->q)
-               ->take(10)->orderby('created_at','desc')->get();
+                ->groupBy('id')
+                 ->orderby('created_at','desc')->get();
+
         if (!empty($data['client']))
      return view('agent.transactions.history',$data);
      return redirect()->back()->with('info','No Client found with this mobile number');
