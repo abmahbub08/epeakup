@@ -77,13 +77,13 @@
                                 @csrf
                                 <input type="hidden" name="step" value="{{encrypt('1')}}">
                                 <div class="row">
-                                    <div class="col-12">
-                                        <label for="first_name">Search Client : </label>
-                                        <div class="autocomplete" style="">
-                                            <input autocomplete="off" name="" id="myInput" oninput="" type="text" class="form-control  {{ $errors->has('sender_name')?' is-invalid':'' }}" value="{{old('sender_name')}}" placeholder="Search by phone number" >
+                                    {{--<div class="col-12">--}}
+                                        {{--<label for="first_name">Search Client : </label>--}}
+                                        {{--<div class="autocomplete" style="">--}}
+                                            {{--<input autocomplete="off" name="" id="myInput" oninput="" type="text" class="form-control  {{ $errors->has('sender_name')?' is-invalid':'' }}" value="{{old('sender_name')}}" placeholder="Search by phone number" >--}}
 
-                                        </div>
-                                    </div>
+                                        {{--</div>--}}
+                                    {{--</div>--}}
                                     <div class="col-md-12">
                                         <div class="form-group">
 
