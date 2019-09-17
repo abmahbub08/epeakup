@@ -221,6 +221,7 @@ class SendMoneyController extends Controller
                 )
                 ->where('clients.phone',$request->q)
                 ->groupBy('id')
+                ->take(10)
                  ->orderby('created_at','desc')->get();
 
         if (!empty($data['client']))
