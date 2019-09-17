@@ -67,19 +67,19 @@
                                                 @php
                                                 $charge = ($request->payment_method == 'bkash') ? getCharge(1) : getCharge(2);
 
-                                                $cost = $request->aud_amount* ($charge/100);
-                                                $total_pay = $request->aud_amount + $cost;
+                                               // $cost = $request->aud_amount* ($charge/100);
+                                                $total_pay = $request->aud_amount + $charge;
                                                 @endphp
-                                                <label>Aud Amount : ${{round($request->aud_amount,2)}} + Service charge (<span id="service_charge">{{$charge}}</span>%) </label>
+                                                <label>Aud Amount : ${{round($request->aud_amount,2)}} + Service charge (<span id="service_charge">{{$charge}}</span>) </label>
                                             </div>
                                             <div class="col-md-4">
-                                                <label for="">= Total Paid : ${{round($total_pay,2)}}</label>
+                                                <label for_cost="">= Total Paid : ${{round($total_pay,2)}}</label>
                                             </div>
                                             <div class="col-md-2">
                                                 <label for="">**Rate : {{getAudCurrency()}}</label>
                                             </div>
                                             <div class="col-md-4 offset-5">
-                                                <label for="">Total BD Receive : {{round(getAudCurrency($total_pay),2)}} BDT</label>
+                                                <label for="">Total BD Receive : {{round(getAudCurrency($request->aud_amount),2)}} BDT</label>
                                             </div>
 
                                         </div>

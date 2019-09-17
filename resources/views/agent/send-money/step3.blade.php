@@ -313,6 +313,7 @@
 
         }
 
+
         var countries = {!! \GuzzleHttp\json_encode($clients) !!};
         // console.log(countries,countries2);
         autocomplete(document.getElementById("myInput"), countries);

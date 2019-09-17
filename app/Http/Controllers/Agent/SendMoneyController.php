@@ -56,6 +56,7 @@ class SendMoneyController extends Controller
             }
             if (3 == decrypt($request->step)){
                 $data['details'] = $request->all();
+
                 return view('agent.send-money.step4',$data);
             }
 
@@ -71,6 +72,31 @@ class SendMoneyController extends Controller
             }
             return redirect()->route('sendMoneyStep');
         }
+    }
+
+    public function resend(Request $request){
+       $data = [];
+       $tr = Transaction::join('clients','clients.id','transactions.client_id')
+           ->join('receivers','receivers.id','transactions.receiver_id')
+           ->select(
+               'receivers.payment_method',
+               DB::raw("CONCAT(clients.first_name,' ', clients.last_name) as sender_name"),
+               DB::raw("CONCAT(receivers.first_name,' ', receivers.last_name) as receiver_name"),
+
+               'clients.phone as australian_number',
+               'receivers.account_number as receiver_number',
+               'receivers.account_number as confirm_receiver_number',
+               'clients.email as sender_email'
+           )
+           ->where('transactions.id',$request->id)
+           ->first()->toArray();
+       ;
+
+
+        $data['details'] = $tr;
+        $data['details']['id'] = encrypt(3);
+
+        return view('agent.send-money.step4',$data);
     }
     public function sendMoneyPreview(){
 
@@ -126,8 +152,7 @@ class SendMoneyController extends Controller
             }
             $charge = ($request->payment_method == 'bkash') ? getCharge(1) : getCharge(2);
 
-            $cost = $request->aud_amount* ($charge/100);
-            $total_pay = $request->aud_amount - $cost;
+            $total_pay = $request->aud_amount + $charge;
             //calculate remaining balance
             $remainingBalance = $balance->balance - $request->aud_amount;
             //update balance
@@ -137,7 +162,8 @@ class SendMoneyController extends Controller
                 'agent_id' => Auth::guard('agent')->id(),
                 'client_id' => $client->id,
                 'receiver_id' => $receiver->id,
-                'amount' =>$total_pay
+                'amount' =>$total_pay,
+                'bd_received_amount' => round(getAudCurrency($request->aud_amount),2)
             ]);
 
             TemporaryTransaction::where('user_id',Auth::guard('agent')->user()->id)->delete();
@@ -149,7 +175,7 @@ class SendMoneyController extends Controller
                    ->with('success', 'Your balance successfully transfer');;
             // all good
         } catch (\Exception $e) {
-            dd($e);
+dd($e,Auth::guard('agent')->id());
             DB::rollback();
 
             // something went wrong
@@ -178,13 +204,15 @@ class SendMoneyController extends Controller
         $data['transactions'] = Transaction::join('clients','clients.id','transactions.client_id')
                  ->join('receivers','receivers.id','transactions.receiver_id')
                 ->select(
-                    'transactions.amount'
+                    'transactions.id'
+                    ,'transactions.amount'
                     ,'transactions.created_at'
                     ,'transactions.status'
                     ,'receivers.payment_method'
                     ,'receivers.first_name'
                     ,'receivers.last_name'
                     ,'receivers.account_number'
+                    ,'transactions.bd_received_amount'
 
                 )
                 ->where('clients.phone',$request->q)

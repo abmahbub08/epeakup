@@ -33,6 +33,7 @@ Route::group(['namespace' => 'Agent'], function() {
     Route::get('search-user','SendMoneyController@searchUser')->name('searchUser');
     Route::get('search-receiver','SendMoneyController@searchReceiver')->name('searchReceiver');
     Route::get('search-client-transaction','SendMoneyController@searchClient')->name('searchClient');
+    Route::get('resend','SendMoneyController@resend')->name('resend');
     Route::any('contact-us','SendMoneyController@contactUs')->name('contactUs');
     // send money new system end
 

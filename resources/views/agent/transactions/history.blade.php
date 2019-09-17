@@ -44,7 +44,9 @@
                             <th scope="col">Name</th>
                             <th scope="col">Account Number</th>
                             <th scope="col">Amount</th>
+                            <th scope="col">BD received</th>
                             <th scope="col">Date</th>
+                            <th scope="col">Action</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -55,7 +57,9 @@
                         <td>{{$item->first_name.' '.$item->last_name}}</td>
                         <td>{{$item->account_number}}</td>
                         <td>{{$item->amount}}</td>
+                        <td>{{$item->bd_received_amount}}</td>
                         <td>{{$item->created_at}}</td>
+                        <td><a href="{{route('resend')}}?id={{$item->id}}"><i class="fa fa-paper-plane" aria-hidden="true"></i></a></td>
                         </tr>
                             @endforeach
 

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaction extends Model
 {
+
     protected $guarded = [];
 
     //Find Agent information of a Transaction
